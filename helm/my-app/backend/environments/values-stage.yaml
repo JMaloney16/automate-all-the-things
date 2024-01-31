@@ -5,4 +5,4 @@ deployment:
     tag: 0
   replicas: 1
   env:
-    redis_host: # This value was modified by the deploy-infra pipeline
+    redis_host: davey-stage-elascache-rep-group.o3ypfk.ng.0001.euw2.cache.amazonaws.com # This value was modified by the deploy-infra pipeline
