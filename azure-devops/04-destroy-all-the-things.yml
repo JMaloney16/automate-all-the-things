@@ -40,9 +40,9 @@ jobs:
     displayName: 'Configure AWS Profile'
 
   # Before deleting all Ingresses we delete all ArgoCD applications because if we don't, it will re-deploy the Ingresses, automatically creating untracked AWS Application Load Balancers, which would mess with the terraform destroy  
-  - script: | 
-      kubectl delete -n argocd applications.argoproj.io --all
-    displayName: 'Delete all ArgoCD applications'
+  # - script: | 
+  #     kubectl delete -n argocd applications.argoproj.io --all
+  #   displayName: 'Delete all ArgoCD applications'
 
   # Before deleting all infra we make sure there are no existing ingresses so the terraform destroy isn't messed up by the existance of untracked AWS Application Load Balancers
   - script: | 
